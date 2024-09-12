@@ -23,4 +23,4 @@ license = "MIT"
 repository = "https://github.com/unco999/bevy_mask_system"
 homepage = "https://your_homepage.com"
 keywords = ["system architecture", "functional programming", "generics", "masking"]
-categories = ["Architecture", "Programming"]s
+categories = ["Architecture", "Programming"]
