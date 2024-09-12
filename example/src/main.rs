@@ -72,7 +72,6 @@ impl<Content:MaskSystemContent> MaskSystem<WeaponDestructionOperation,Content> f
 
 
 fn main() {
-    println!("无害");
 
     /*用单一标签 WeaponExtractElements 提取系统函数 并使用绑定自定义上下文。**/
     /**"Extract system functions using a single label WeaponExtractElements and bind custom contexts." */
