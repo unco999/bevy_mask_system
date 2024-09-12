@@ -4,22 +4,23 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-mask_system_lib = { path = "mask_system_lib" }
+mask_system_lib = { path = "mask_system_lib", version="0.1.0" }
 syn = { version = "1.0", features = ["derive"] }
 quote = "1.0"
 typenum = "1.15"
-// bevy = "0.14.1"
+# bevy = "0.14.1"
 
-// [[bin]]
-// name = "example"
-// path = "example/src/main.rs" 
+# [[bin]]
+# name = "example"
+# path = "example/src/main.rs" 
 
 [lib]
 proc-macro = true
 
+
 description = "A library for system architecture that utilizes functional programming principles to organize code. It primarily uses mask-based generics to structure systems."
 license = "MIT"
-repository = "https://github.com/your_username/my_crate"
+repository = "https://github.com/unco999/bevy_mask_system"
 homepage = "https://your_homepage.com"
 keywords = ["system architecture", "functional programming", "generics", "masking"]
-categories = ["Architecture", "Programming"]
+categories = ["Architecture", "Programming"]s
