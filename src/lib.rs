@@ -1,8 +1,10 @@
+
+pub use mask_system_lib::{*};
 extern crate proc_macro;
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::DeriveInput;
-use syn::{self, Data};
+use syn::{self, Data}
 
 #[proc_macro_derive(MaskSys)]
 pub fn MaskSys(input: TokenStream) -> TokenStream {
