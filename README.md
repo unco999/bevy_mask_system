@@ -1,7 +1,5 @@
 # BevyMaskSysmtem
 
-![alt text](public/image.png)
-
 # Bevy 系统架构探索库
 
 这个库用于探索 Bevy 游戏引擎的系统架构方式，参考了一部分函数式编程，更多的是一种没有目的的常量掩码泛型实验。
