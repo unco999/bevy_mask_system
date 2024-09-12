@@ -2,8 +2,8 @@
 
 # Bevy 系统架构探索库
 这个库用于探索 Bevy 游戏引擎的系统架构方式，参考了一部分函数式编程，更多的是一种没有目的的常量掩码泛型实验。
-
-cargo add bevy_mask_system
+cargo add mask_system_lib //实现和过程宏分离了
+cargo add bevy_mask_system //实现和过程宏分离了 两个都要添加
 设计理念 https://www.bilibili.com/opus/973529984968687671
 ## 特性
 
