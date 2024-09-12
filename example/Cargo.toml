@@ -1,0 +1,8 @@
+[package]
+name = "example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy_mask_system = {  path = "../"  }
+mask_system_lib = { path = "../mask_system_lib"}
