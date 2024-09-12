@@ -3,6 +3,7 @@ use proc_macro::TokenStream;
 use quote::quote;
 use syn::DeriveInput;
 use syn::{self, Data};
+use mask_system_lib::{*};
 
 #[proc_macro_derive(MaskSys)]
 pub fn MaskSys(input: TokenStream) -> TokenStream {
