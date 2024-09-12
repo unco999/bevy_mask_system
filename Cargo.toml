@@ -7,7 +7,7 @@ description = "A library for system architecture that utilizes functional progra
 license = "MIT"
 repository = "https://github.com/unco999/bevy_mask_system"
 homepage = "https://your_homepage.com"
-keywords = ["functional programming", "generics", "masking"]
+keywords = ["fp" "generics", "masking"]
 categories = ["Architecture", "Programming"]
 
 [dependencies]
