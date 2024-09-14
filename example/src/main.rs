@@ -33,38 +33,38 @@ pub struct Weapon;
 
 impl<Content:MaskSystemContent> MaskSystem<WeaponExtractElements,Content> for Weapon
     where
-    [(); {Content::custom_val}]:,
+    [(); {Content::tag_1_c}]:,
 {
     const _marker:usize = 2;
 
     type Output = fn(
-        Query<&element<{Content::custom_val}>>,
+        Query<&element<{Content::tag_1_c}>>,
     );
 
     
     fn export() -> Self::Output {
-        |query:Query<&element<{Content::custom_val}>>|{
-            println!("WeaponExtractElements tag:{}",Content::custom_val); 
-            println!("提取元素 这里的标签是:{}",Content::custom_val);
+        |query:Query<&element<{Content::tag_1_c}>>|{
+            println!("WeaponExtractElements tag:{}",Content::tag_1_c); 
+            println!("提取元素 这里的标签是:{}",Content::tag_1_c);
         }
     }
 } 
 
 impl<Content:MaskSystemContent> MaskSystem<WeaponDestructionOperation,Content> for Weapon
     where
-    [(); {Content::custom_val}]:,
+    [(); {Content::tag_2_c}]:,
 {
     const _marker:usize = 4;
 
     type Output = fn(
-        Query<&element<{Content::custom_val}>>,
+        Query<&element<{Content::tag_2_c}>>,
     );
 
     
     fn export() -> Self::Output {
-        |query:Query<&element<{Content::custom_val}>>|{
-            println!("WeaponDestructionOperation tag:{}",Content::custom_val); 
-            println!("销毁武器 这里的标签是:{}",Content::custom_val);
+        |query:Query<&element<{Content::tag_2_c}>>|{
+            println!("WeaponDestructionOperation tag:{}",Content::tag_2_c); 
+            println!("销毁武器 这里的标签是:{}",Content::tag_2_c);
         }
     }
 } 
@@ -75,15 +75,15 @@ fn main() {
 
     /*用单一标签 WeaponExtractElements 提取系统函数 并使用绑定自定义上下文。**/
     /**"Extract system functions using a single label WeaponExtractElements and bind custom contexts." */
-    let fns1 = F::<op!(WeaponExtractElements),Weapon,Content::<1,2,3,5>>::sign();
+    let fns1 = F::<op!(WeaponExtractElements),Weapon,Content::<1,2,3,5,5,5,4>>::sign();
     
     /**用组合标签 WeaponExtractElements + WeaponDestructionOperation 提取WeaponExtractElements + WeaponDestructionOperation 并使用绑定自定义上下文。**/
     /**"Extract WeaponExtractElements + WeaponDestructionOperation using a combination of labels WeaponExtractElements + WeaponDestructionOperation and bind custom contexts." */
-    let fns2 = F::<op!(WeaponExtractElements + WeaponDestructionOperation),Weapon,Content::<1,2,3,5>>::mask();
+    let fns2 = F::<op!(WeaponExtractElements + WeaponDestructionOperation),Weapon,Content::<1,2,3,5,5,4,3>>::mask();
     
     /**提取所有系统函数 并使用绑定自定义上下文。**/
     /** "Extract all system functions and bind custom contexts."**/
-    let fns3 = F::<op!(WeaponExtractElements + WeaponDestructionOperation),Weapon,Content::<1,2,3,5>>::all();
+    let fns3 = F::<op!(WeaponExtractElements + WeaponDestructionOperation),Weapon,Content::<1,2,3,5,5,4,3>>::all();
 
     App::new()
     .add_systems(Startup,fns3)

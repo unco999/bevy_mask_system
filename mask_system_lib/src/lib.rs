@@ -460,19 +460,25 @@ impl<S,Content:MaskSystemContent> CheckMaskSystem<S,Content> for UTerm
 
 
 pub trait MaskSystemContent{
-    const market:usize;
+    const marker:usize;
     const main_mask:usize;
     const fp_type:usize;
-    const custom_val:usize;
+    const tag_1_c:usize;
+    const tag_2_c:usize;
+    const tag_3_c:usize;
+    const tag_4_c:usize;
 }
 
-pub struct Content<const market:usize,const main_mask:usize,const fp_type:usize,const custom_val:usize>;
+pub struct Content<const market:usize,const main_mask:usize,const fp_type:usize,const tag_1_c:usize,const tag_2_c:usize,const tag_3_c:usize,const tag_4_c:usize>;
 
-impl<const market:usize,const main_mask:usize,const fp_type:usize,const custom_val:usize> MaskSystemContent for Content<market,main_mask,fp_type,custom_val> {
-    const market:usize = market;
+impl<const market:usize,const main_mask:usize,const fp_type:usize,const tag_1_c:usize,const tag_2_c:usize,const tag_3_c:usize,const tag_4_c:usize> MaskSystemContent for Content<market,main_mask,fp_type,tag_1_c,tag_2_c,tag_3_c,tag_4_c> {
+    const marker:usize = market;
     const main_mask:usize = main_mask;
     const fp_type:usize = fp_type;
-    const custom_val:usize = custom_val;
+    const tag_1_c:usize = tag_1_c;
+    const tag_2_c:usize = tag_2_c;
+    const tag_3_c:usize = tag_3_c;
+    const tag_4_c:usize = tag_4_c;
 }
 
 
