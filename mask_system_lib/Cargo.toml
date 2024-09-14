@@ -1,6 +1,6 @@
 [package]
 name = "mask_system_lib"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 
 description = "(bevy_mask_system)A library for system architecture that utilizes functional programming principles to organize code. It primarily uses mask-based generics to structure systems."
